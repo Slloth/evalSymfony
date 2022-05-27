@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit N° {{ produit.id}}{% endblock %}
+
+{% block body %}
+
+<ul>
+    <li>{{ produit.id }}</li>
+    <li>{{ produit.nom }}</li>
+    <li>{{ produit.description|raw }}</li>
+    <li>{{ produit.prix }}</li>
+    <li>{{ produit.stock }}</li>
+    <li><img src="{{ produit.urlImg }}"/></li>
+    {% if produit.stock > 0 %}
+        <button>Acheter</button>
+    {% endif %}
+</ul>
+
+{% endblock %}
