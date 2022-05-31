@@ -8,7 +8,7 @@
     {% for produit in produits %}
         <li>produit.nom</li>
         <li>produit.prix</li>
-        <li><img src="{{ produit.urlImg }}"/></li>
+        <li><img src="/uploads/images/{{ produit.urlImg }}"/></li>
         <button><a href="{{ path('app_home_show',{id: produit.id }) }}">voir</a></button>
     {% endfor %}
 </ul>

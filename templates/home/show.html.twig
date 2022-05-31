@@ -8,9 +8,9 @@
     <li>{{ produit.id }}</li>
     <li>{{ produit.nom }}</li>
     <li>{{ produit.description|raw }}</li>
-    <li>{{ produit.prix }}</li>
+    <li>{{ produit.prix }}€</li>
     <li>{{ produit.stock }}</li>
-    <li><img src="{{ produit.urlImg }}"/></li>
+    <li><img src="/uploads/images/{{ produit.urlImg }}"/></li>
     {% if produit.stock > 0 %}
         <button>Acheter</button>
     {% endif %}

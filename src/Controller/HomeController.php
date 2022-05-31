@@ -18,7 +18,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_home_show')]
+    #[Route('/{id}', name: 'app_home_show',requirements: ['id' => '\d+'])]
     public function show(Produit $produit): Response
     {
         return $this->render('home/show.html.twig', [
