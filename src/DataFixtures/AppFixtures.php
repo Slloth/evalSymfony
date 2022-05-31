@@ -28,6 +28,17 @@ class AppFixtures extends Fixture
 
         $manager->persist($user);
 
+        $produit = new Produit();
+
+        $produit    ->setNom($this->faker->word())
+                    ->setDescription($this->faker->sentence())
+                    ->setStock(100)
+                    ->setPrix($this->faker->randomFloat(2,1,999))
+                    ->setUrlImg('IMG_09s23-2.jpg')
+        ;
+
+        $manager->persist($produit);
+
         $manager->flush();
     }
 }
